@@ -1,3 +1,4 @@
+
 def enter_marks_to_list(marks):
     """
     This function allows the user to input marks until they choose to stop.
@@ -37,3 +38,29 @@ def calculate_mean(marks):
         return 0  # Return 0 if list is empty
     return sum(marks) / len(marks)  # Calculate mean of marks and return it
 
+def calculate_median(marks):
+    """
+    Calculate the median of a list of marks.
+
+    Args:
+    marks (list): A list of numerical marks.
+
+    Returns:
+    float: The median of the marks.
+    """
+    # Sort the list of marks in ascending order
+    sorted_marks = sorted(marks)
+    # Get the number of marks in the list
+    n = len(sorted_marks)
+    
+    # Check if the number of marks is even
+    if n % 2 == 0:
+        # Calculate the median for even-length lists
+        # by taking the average of the two middle values
+        return (sorted_marks[n // 2 - 1] + sorted_marks[n // 2]) / 2
+    else:
+        # Calculate the median for odd-length lists
+        # by returning the middle value
+        return sorted_marks[n // 2]
+    
+    

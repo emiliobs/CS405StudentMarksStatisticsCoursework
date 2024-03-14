@@ -1,5 +1,7 @@
-from Models.calculate_model import calculate_mean, enter_marks_to_list  # Importing necessary functions from Models module
-from Views.menu_view import print_menu  # Importing print_menu function from Views module
+# Importing necessary functions from Models module
+from Models.calculate_model import calculate_mean, enter_marks_to_list, calculate_median 
+# Importing print_menu function from Views module
+from Views.menu_view import print_menu  
 
 def main():
     marks = []  # Initialize an empty list to store marks
@@ -16,6 +18,14 @@ def main():
             print("----------- Result The Means ---------")
             if marks:  # Check if there are marks entered
                 print("Mean Of The Numbers: ", calculate_mean(marks))  # Print mean of the entered marks
+            else:
+                print("No marks entered yet.")  # Inform the user if no marks have been entered
+            print("--------------------------------------")
+            print("\n")
+        elif choice == '3':
+            print("----------- Result The Median ---------")
+            if marks:  # Check if there are marks entered
+                print("Median Of The Numbers: ", calculate_median(marks))  # Print mean of the entered marks
             else:
                 print("No marks entered yet.")  # Inform the user if no marks have been entered
             print("--------------------------------------")
