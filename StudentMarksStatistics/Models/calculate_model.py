@@ -85,4 +85,3 @@ def calculate_mode(marks):
     
     # Return the first mode if it exists, otherwise return None
     return mode[0] if mode else None
-

@@ -38,6 +38,12 @@ def main():
                 print("No marks entered yet.")  # Inform the user if no marks have been entered
             print("--------------------------------------")
             print("\n")
+        elif choice == '5':
+            print("----------------- Reset The List --------------")
+            marks = []
+            print("You Have Choosen To Enter a New Set Of Numbers.")
+            print("-----------------------------------------------")
+            print("\n")
         elif choice == '6':  # If user chooses option 6
             print("======================================")
             print("=                                    =") 
