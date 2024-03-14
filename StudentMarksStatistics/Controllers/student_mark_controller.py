@@ -1,5 +1,5 @@
 # Importing necessary functions from Models module
-from Models.calculate_model import calculate_mean, enter_marks_to_list, calculate_median 
+from Models.calculate_model import calculate_mean, enter_marks_to_list, calculate_median, calculate_mode
 # Importing print_menu function from Views module
 from Views.menu_view import print_menu  
 
@@ -26,6 +26,14 @@ def main():
             print("----------- Result The Median ---------")
             if marks:  # Check if there are marks entered
                 print("Median Of The Numbers: ", calculate_median(marks))  # Print mean of the entered marks
+            else:
+                print("No marks entered yet.")  # Inform the user if no marks have been entered
+            print("--------------------------------------")
+            print("\n")
+        elif choice == '4':
+            print("----------- Result The Mode ---------")
+            if marks:  # Check if there are marks entered
+                print("Mode Of The Numbers: ", calculate_mode(marks))  # Print mean of the entered marks
             else:
                 print("No marks entered yet.")  # Inform the user if no marks have been entered
             print("--------------------------------------")

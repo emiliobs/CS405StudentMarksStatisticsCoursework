@@ -63,4 +63,26 @@ def calculate_median(marks):
         # by returning the middle value
         return sorted_marks[n // 2]
     
+def calculate_mode(marks):
+    # Check if the marks list is empty
+    if not marks:
+        return None  # Return None if the list is empty, as there is no mode
     
+    # Create an empty dictionary to store the count of each mark
+    marks_count = {}
+    
+    # Count the occurrences of each mark in the list
+    for mark in marks:
+        # Increase the count of the current mark by 1
+        # Using marks_count.get() to retrieve the count of the current mark, or 0 if not present
+        marks_count[mark] = marks_count.get(mark, 0) + 1
+    
+    # Find the maximum count of occurrences
+    max_count = max(marks_count.values())
+    
+    # Find all marks that have the maximum count (the mode(s))
+    mode = [key for key, value in marks_count.items() if value == max_count]
+    
+    # Return the first mode if it exists, otherwise return None
+    return mode[0] if mode else None
+
