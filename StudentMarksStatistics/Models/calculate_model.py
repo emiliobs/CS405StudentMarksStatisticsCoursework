@@ -1,5 +1,6 @@
 
-import math  # Importing the math module to use math.sqrt function for square root calculation
+# Importing the math module to use math.sqrt function for square root calculation
+import math  
 
 
 def enter_marks_to_list(marks):
