@@ -52,22 +52,21 @@ def enter_marks_to_list_by_comma(marks):
        
     while True:  # Start an infinite loop
         # Prompt the user to enter a mark
-        mark_input = input("Enter a Students Mark  By Commas (or Type 'done' to Finish.): ") 
+        mark_input = input("Enter a Student's Mark by Commas (or Type 'done' to Finish): ") 
         # Check if user wants to finish entering marks
         if mark_input.lower() == "done":  
             # Exit the loop if user inputs 'done'
             break  
         elif ',' in mark_input:            
             try:
+                # Split the input by commas, convert each substring to float, and add to the marks list
                 marks.extend(map(float, mark_input.split(',')))
-                #if mark > -1:  # Check if mark is valid (assuming negative marks are not allowed)
-                print("Number Of Marks Entered: ", len(marks))  # Print number of marks entered
-               # else:
-                    # Print error message for invalid mark
-                    #print("Please Enter a Valid Mark (E.g., 5, 13.5).") 
+                # Print the number of marks entered
+                print("Number of Marks Entered:", len(marks))  
             except ValueError:
                 # Print error message for non-numerical input            
                 print("Please Enter a Valid Numerical Mark.")  
+
 
 # Define a function named ShowAllMarks that takes a list named marks as input
 def ShowAllMarks(marks):

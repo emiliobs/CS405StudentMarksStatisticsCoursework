@@ -108,7 +108,7 @@ def main():
             # Instead, it goes back to the beginning of the loop to allow the user to add more numbers.  
             continue
         elif choice == "7":
-            print("------ Adding Marks In by Comma -----")
+            print("---------- Adding Marks In by Comma ----------")
             # Check if there are marks entered
             if marks:  
                  # Print mean of the entered marks
