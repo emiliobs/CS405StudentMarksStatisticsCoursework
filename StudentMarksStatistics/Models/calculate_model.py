@@ -48,8 +48,7 @@ def enter_marks_to_list_by_comma(marks):
 
     Returns:
     None
-    """
-    
+    """    
     while True:  # Start an infinite loop
         # Prompt the user to enter a mark
         mark_input = input("Enter a Student's Mark by Commas (or Type 'done' to Finish): ") 
@@ -67,7 +66,6 @@ def enter_marks_to_list_by_comma(marks):
                 # Print error message for non-numerical input            
                 print("Please Enter a Valid Numerical Mark.")  
               
-
 # Define a function named ShowAllMarks that takes a list named marks as input
 def ShowAllMarks(marks):
     # Define a function named ShowAllMarks that takes a list named marks as input
