@@ -6,7 +6,7 @@ import math
  Primary statistical functions implemented within the program.
 """
 
-# Function Calculate the median of the marks
+# Function enter marks to list
 def enter_marks_to_list(marks):
     """
     This function allows the user to input marks until they choose to stop.
@@ -36,6 +36,38 @@ def enter_marks_to_list(marks):
         except ValueError:
             # Print error message for non-numerical input            
             print("Please Enter a Valid Numerical Mark.")  
+            
+# Function enter marks to list by commas
+def enter_marks_to_list_by_comma(marks):
+    """
+    This function allows the user to input marks until they choose to stop.
+    It validates each input to ensure it is a valid numerical mark.
+
+    Args:
+    marks (list): A list to which the entered marks will be appended.
+
+    Returns:
+    None
+    """
+       
+    while True:  # Start an infinite loop
+        # Prompt the user to enter a mark
+        mark_input = input("Enter a Students Mark  By Commas (or Type 'done' to Finish.): ") 
+        # Check if user wants to finish entering marks
+        if mark_input.lower() == "done":  
+            # Exit the loop if user inputs 'done'
+            break  
+        elif ',' in mark_input:            
+            try:
+                marks.extend(map(float, mark_input.split(',')))
+                #if mark > -1:  # Check if mark is valid (assuming negative marks are not allowed)
+                print("Number Of Marks Entered: ", len(marks))  # Print number of marks entered
+               # else:
+                    # Print error message for invalid mark
+                    #print("Please Enter a Valid Mark (E.g., 5, 13.5).") 
+            except ValueError:
+                # Print error message for non-numerical input            
+                print("Please Enter a Valid Numerical Mark.")  
 
 # Define a function named ShowAllMarks that takes a list named marks as input
 def ShowAllMarks(marks):
@@ -47,9 +79,6 @@ def ShowAllMarks(marks):
         # Convert each element in the marks list to a string using map() and str() functions
         # Then join all the elements together with a space in between using join()
         # Finally, print the result
-       
-        
-
 
 # Function Calculate the mean of the marks
 def calculate_mean(marks):

@@ -1,5 +1,5 @@
 # Importing necessary functions from Models module
-from Models.calculate_model import calculate_mean, enter_marks_to_list, calculate_median, calculate_mode, calculate_skewness, ShowAllMarks
+from Models.calculate_model import calculate_mean, enter_marks_to_list, calculate_median, calculate_mode, calculate_skewness, ShowAllMarks,enter_marks_to_list_by_comma
 # Importing print_menu function from Views module
 from Views.menu_view import print_menu, autor_welcome, goodbye_user
 
@@ -33,7 +33,7 @@ def main():
         print("\n")
         # If user chooses option 1, allow them to enter marks
         if choice == '1': 
-            print("------------------- Entering Marks ----------------------")
+            print("------------------- Adding Marks ----------------------")
             # Call enter_marks_to_list function to input marks
             enter_marks_to_list(marks)  
             print("---------------------------------------------------------")
@@ -84,7 +84,7 @@ def main():
             # Check if there are marks entered
             if marks:  
                  # Print mean of the entered marks
-                print("Mode Of The Numbers: ", calculate_mode(marks)) 
+                 print("MOde Of The Numbers: ", calculate_mode(marks)) 
             else:
                 # Inform the user if no marks have been entered
                 print("No marks entered yet.")  
@@ -107,10 +107,22 @@ def main():
             # In this context, it ensures that the program does not proceed to present the menu if there are not enough numbers in the list.
             # Instead, it goes back to the beginning of the loop to allow the user to add more numbers.  
             continue
+        elif choice == "7":
+            print("------ Adding Marks In by Comma -----")
+            # Check if there are marks entered
+            if marks:  
+                 # Print mean of the entered marks
+                enter_marks_to_list_by_comma(marks)
+            else:
+                # Inform the user if no marks have been entered
+                print("No marks entered yet.")  
+            print("----------------------------------------------")
+            # Print a blank line
+            print("\n")
                        
-        # If user chooses option 7                   
-        elif choice == '7':
-            print("---------------- Reset The List --------------")
+        # If user chooses option 9                   
+        elif choice == '9':
+            print("--- Enter a New Set Of Numbers In The List ---")
             # Initialize an empty list named 'marks'
             # This line creates a new list named 'marks' with no elements.
             # The square brackets [] denote an empty list in Python.
@@ -120,8 +132,8 @@ def main():
             print("----------------------------------------------")
             # Print a blank line
             print("\n")            
-        # If user chooses option 8
-        elif choice == '8': 
+        # If user chooses option 10
+        elif choice == '10': 
            # Exit the function and the program
            goodbye_user()
            print("\n")            

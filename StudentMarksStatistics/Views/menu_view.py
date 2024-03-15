@@ -35,19 +35,21 @@ def print_menu():
     None
     """
     print("\n==================== MENU ====================")  # Print menu header
-    print("=                                            =")  # Print option 1
-    print("=                                            =")  # Print option 1
-    print("= 1. ENTER MARKS TO THE LIST.                =")  # Print option 1
-    print("= 2. SHOW ALL MARKS IN THE LIST.             =")
-    print("= 3. PRINT THE MEAN OF THE NUMBERS.          =")
-    print("= 4. PRINT THE MEDIAN OF THE NUMBERS.        =")
-    print("= 5. PRINT THE MODE OF THE NUMBERS.          =")    
-    print("= 6. PRINT THE SKEWNESS OF THE NUMBERS.      =")  # Print option 6
-    print("= 7. GO BACK AND ENTER A NEW SET OF NUMBERS. =")# Print option 2
-    print("= 8. EXIT THE APPLICATION.                   =")  # Print option 6
-    print("=                                            =")  # Print option 6
-    print("=                                            =")  # Print option 6
-    print("==============================================")  # Print menu footer
+    print("=                                             =")  # Print option 1
+    print("=                                             =")  # Print option 1
+    print("= 1.  ADD MARKS TO THE LIST.                  =")  # Print option 1
+    print("= 2.  SHOW ALL MARKS IN THE LIST.             =")
+    print("= 3.  PRINT THE MEAN OF THE NUMBERS.          =")
+    print("= 4.  PRINT THE MEDIAN OF THE NUMBERS.        =")
+    print("= 5.  PRINT THE MODE OF THE NUMBERS.          =")    
+    print("= 6.  PRINT THE SKEWNESS OF THE NUMBERS.      =")  # Print option 6
+    print("= 7.  ADD MORE NUMBERS TO THE LIST BY COMMAS. =")  # Print option 6
+    print("= 8.  READ DATA FROM A FILE.                  =")  # Print option 6
+    print("= 9.  GO BACK AND ENTER A NEW SET OF NUMBERS. =")# Print option 2
+    print("= 10. EXIT THE APPLICATION.                   =")  # Print option 6
+    print("=                                             =")  # Print option 6
+    print("=                                             =")  # Print option 6
+    print("===============================================")  # Print menu footer
 
 # Exit the function and the program
 def goodbye_user():
