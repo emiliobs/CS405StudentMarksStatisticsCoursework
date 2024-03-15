@@ -2,7 +2,11 @@
 # Importing the math module to use math.sqrt function for square root calculation
 import math  
 
+"""
+ Primary statistical functions implemented within the program.
+"""
 
+# Function Calculate the median of the marks
 def enter_marks_to_list(marks):
     """
     This function allows the user to input marks until they choose to stop.
@@ -30,6 +34,7 @@ def enter_marks_to_list(marks):
             # Print error message for non-numerical input            
             print("Please Enter a Valid Numerical Mark.")  
 
+# Function Calculate the mean of the marks
 def calculate_mean(marks):
     """
     This function calculates the mean of the entered marks.
@@ -44,6 +49,7 @@ def calculate_mean(marks):
         return 0  # Return 0 if list is empty
     return sum(marks) / len(marks)  # Calculate mean of marks and return it
 
+# Function Calculate the median of the marks
 def calculate_median(marks):
     """
     Calculate the median of a list of marks.
@@ -54,8 +60,7 @@ def calculate_median(marks):
     Returns:
     float: The median of the marks.
     """
-    # Calculate the median of the marks
-    
+       
     if not marks:  # Check if marks list is empty
         return 0  # Return 0 if list is empty
     
@@ -74,6 +79,7 @@ def calculate_median(marks):
         # by returning the middle value
         return sorted_marks[n // 2]
     
+# Function Calculate the mode of the marks
 def calculate_mode(marks):
     # Check if the marks list is empty
     if not marks:
@@ -97,6 +103,7 @@ def calculate_mode(marks):
     # Return the first mode if it exists, otherwise return None
     return mode[0] if mode else None
 
+# Function Calculate the standard deviation of the marks
 def calculate_standard_deviation(marks):
     """
     Calculate the standard deviation of a list of marks.
@@ -107,8 +114,6 @@ def calculate_standard_deviation(marks):
     Returns:
     float: The standard deviation of the marks.
     """
-        
-    # Calculate the standard deviation of the marks
     
     if not marks:  # Check if the marks list is empty
         return 0  # If the marks list is empty, return 0 as there are no marks to compute the standard deviation
@@ -131,6 +136,7 @@ def calculate_standard_deviation(marks):
     # This is because the standard deviation is the measure of how spread out the values in a dataset are.
     # By returning the square root of the variance, we're providing a measure of the spread that is in the same units as the original data.
 
+# Function Calculate the skewness of the marks
 def calculate_skewness(marks):
     """
     Calculate the skewness of a list of marks.
@@ -141,8 +147,7 @@ def calculate_skewness(marks):
     Returns:
     float: The skewness of the marks.
     """
-    # Calculate the skewness of the marks
-    
+       
     # Calculate the mean of the marks
     mean = calculate_mean(marks)  
     # Above line uses a separate function named calculate_mean to compute the mean of the marks.
