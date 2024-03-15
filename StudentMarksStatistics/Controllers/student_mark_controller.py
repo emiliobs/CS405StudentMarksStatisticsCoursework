@@ -1,5 +1,5 @@
 # Importing necessary functions from Models module
-from Models.calculate_model import calculate_mean, enter_marks_to_list, calculate_median, calculate_mode, calculate_skewness
+from Models.calculate_model import calculate_mean, enter_marks_to_list, calculate_median, calculate_mode, calculate_skewness, ShowAllMarks
 # Importing print_menu function from Views module
 from Views.menu_view import print_menu, autor_welcome, goodbye_user
 
@@ -40,7 +40,20 @@ def main():
             # Print a blank line
             print("\n")
             # If user chooses option 2
-        elif choice == "2":  
+        elif choice == '2':
+            print("----------------- Show Marks -----------------")
+             # Check if there are marks entered
+            if marks: 
+                # Print mean of the entered marks
+                 ShowAllMarks(marks)  
+            else:
+                # Inform the user if no marks have been entered
+                print("No marks entered yet.")  
+            print("----------------------------------------------")
+            # Print a blank line
+            print("\n")
+            # If user chooses option 3 
+        elif choice == "3":  
             print("--------------- Result The Means -------------")
              # Check if there are marks entered
             if marks: 
@@ -52,8 +65,8 @@ def main():
             print("----------------------------------------------")
             # Print a blank line
             print("\n")
-            # If user chooses option 3
-        elif choice == '3':
+            # If user chooses option 4
+        elif choice == '4':
             print("-------------- Result The Median--------------")
             # Check if there are marks entered
             if marks: 
@@ -65,8 +78,8 @@ def main():
             print("----------------------------------------------")
             # Print a blank line
             print("\n")
-            # If user chooses option 4
-        elif choice == '4':
+            # If user chooses option 5
+        elif choice == '5':
             print("---------------- Result The Mode -------------")
             # Check if there are marks entered
             if marks:  
@@ -78,48 +91,25 @@ def main():
             print("----------------------------------------------")
             # Print a blank line
             print("\n")
-            # If user chooses option 5
-        elif choice == '5': 
-            # If the length of the 'marks' list is less than 3, display a warning message
-            if len(marks) < 3:
-                print("------------- Warning The Skewness ------------")
-                print("Sorry!. Insufficient Data Points To Calculate Skewness(At Leat 3 Marks.)")
+            # If user chooses option 6
+        elif choice == '6': 
+            try:
+                print("------------- Result The Skewness ------------")  
+                # Print mean of the entered marks              
+                print("Skewness Of The Numbers: ", calculate_skewness(marks))
+                print("----------------------------------------------")
+            except ValueError as ve:
+               # Handle the case where an error occurs during calculation
+               print(ve)
                 # Prompt the user to enter marks to the list
-                enter_marks_to_list(marks)          
-                print("----------------------------------------------")   
-                # The 'continue' statement is used to skip the rest of the loop's code block and move to the next iteration.
-                # In this context, it ensures that the program does not proceed to present the menu if there are not enough numbers in the list.
-                # Instead, it goes back to the beginning of the loop to allow the user to add more numbers.  
-                continue  
-            else:                            
-                print("------------- Result The Skewness ------------")
-                # Check if there are marks entered
-                if marks:  
-                    try: 
-                       # Print mean of the entered marks
-                       print("Skewness Of The Numbers: ", calculate_skewness(marks))                         
-                    except ValueError as ve:
-                        # Handle the case where an error occurs during calculation
-                        print("Error: ", ve)
-                         # Prompt the user to enter marks to the list
-                        enter_marks_to_list(marks)          
-                        print("----------------------------------------------")     
-                    # The 'continue' statement is used to skip the rest of the loop's code block and move to the next iteration.
-                    # In this context, it ensures that the program does not proceed to present the menu if there are not enough numbers in the list.
-                    # Instead, it goes back to the beginning of the loop to allow the user to add more numbers.
-                    continue  
-                
-                else:
-                      # Inform the user if no marks have been entered
-                     print("No marks entered yet.") 
-                     print("----------------------------------------------")
-            # Print a blank line
-            # The "\n" is an escape sequence representing a newline character,
-            # which moves the cursor to the next line when printed.
-            # Therefore, this line prints an empty line in the console output.
-            print("\n")   
-        # If user chooses option 6                   
-        elif choice == '6':
+               enter_marks_to_list(marks)                  
+            # The 'continue' statement is used to skip the rest of the loop's code block and move to the next iteration.
+            # In this context, it ensures that the program does not proceed to present the menu if there are not enough numbers in the list.
+            # Instead, it goes back to the beginning of the loop to allow the user to add more numbers.  
+            continue
+                       
+        # If user chooses option 7                   
+        elif choice == '7':
             print("---------------- Reset The List --------------")
             # Initialize an empty list named 'marks'
             # This line creates a new list named 'marks' with no elements.
@@ -130,8 +120,8 @@ def main():
             print("----------------------------------------------")
             # Print a blank line
             print("\n")            
-        # If user chooses option 7
-        elif choice == '7': 
+        # If user chooses option 8
+        elif choice == '8': 
            # Exit the function and the program
            goodbye_user()
            print("\n")            

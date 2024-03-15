@@ -20,9 +20,11 @@ def enter_marks_to_list(marks):
     """
     while True:  # Start an infinite loop
         # Prompt the user to enter a mark
-        mark_input = input("Enter a Student's Mark (or Type 'done' to Finish.): ")  # Prompt user for input
-        if mark_input.lower() == "done":  # Check if user wants to finish entering marks
-            break  # Exit the loop if user inputs 'done'
+        mark_input = input("Enter a Student's Mark (or Type 'done' to Finish.): ") 
+        # Check if user wants to finish entering marks
+        if mark_input.lower() == "done":  
+            # Exit the loop if user inputs 'done'
+            break  
         try:
             mark = float(mark_input)  # Convert input to float
             if mark > -1:  # Check if mark is valid (assuming negative marks are not allowed)
@@ -34,6 +36,20 @@ def enter_marks_to_list(marks):
         except ValueError:
             # Print error message for non-numerical input            
             print("Please Enter a Valid Numerical Mark.")  
+
+# Define a function named ShowAllMarks that takes a list named marks as input
+def ShowAllMarks(marks):
+    # Define a function named ShowAllMarks that takes a list named marks as input
+    print("Number Of Marks Entered: ", len(marks) ,"\t")
+    for mark in marks:
+        # Iterate over each element in the marks list        
+        print(" ", mark)
+        # Convert each element in the marks list to a string using map() and str() functions
+        # Then join all the elements together with a space in between using join()
+        # Finally, print the result
+       
+        
+
 
 # Function Calculate the mean of the marks
 def calculate_mean(marks):
@@ -151,8 +167,8 @@ def calculate_skewness(marks):
     
     # Check for empty list or insufficient data points
     if len(marks) < 3:
-        raise ValueError("Inssufficient Data Points To Calculate Skewness.")
-    
+        raise ValueError("Sorry!. Insufficient Data Points To Calculate Skewness(At Leat 3 Marks.")
+    #Inssufficient Data Points To Calculate Skewness.
        
     # Calculate the mean of the marks
     # Above line uses a separate function named calculate_mean to compute the mean of the marks.
@@ -174,9 +190,8 @@ def calculate_skewness(marks):
     
     # Check for division by zero
     if denominator == 0:
-        raise ValueError("Cannot Divide By Zero.")
-    
-    
+        raise ValueError("Sorry: Must Have At  leat One Mark is greater Than Zero In the List.")
+       
     
     # Return the skewness value
     return numerator / denominator
