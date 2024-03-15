@@ -111,18 +111,16 @@ def main():
             continue
          # If user chooses option 8 
         elif choice == "7":
-            print("---------- Adding Marks In by Comma ----------")
-            # Check if there are marks entered
-            if marks:  
-                 # Print mean of the entered marks
+            try:                
+                print("---------- Adding Marks In by Comma ----------")
+                # Print mean of the entered marks
                 enter_marks_to_list_by_comma(marks)
-            else:
-                # Inform the user if no marks have been entered
-                print("No marks entered yet.")  
-            print("----------------------------------------------")
-            # Print a blank line
-            print("\n")
-                       
+                print("----------------------------------------------")
+            except ValueError as ve:
+                print(ve)
+                print("----------------------------------------------")
+                # Print a blank line                
+                print("\n")                       
         # If user chooses option 8                   
         elif choice == '8':
             print("--- Enter a New Set Of Numbers In The List ---")
