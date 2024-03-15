@@ -44,8 +44,8 @@ def print_menu():
     print("= 5.  PRINT THE MODE OF THE NUMBERS.          =")    
     print("= 6.  PRINT THE SKEWNESS OF THE NUMBERS.      =")  # Print option 6
     print("= 7.  ADD MORE NUMBERS TO THE LIST BY COMMAS. =")  # Print option 6
-    print("= 8.  READ DATA FROM A FILE.                  =")  # Print option 6
-    print("= 9.  GO BACK AND ENTER A NEW SET OF NUMBERS. =")# Print option 2
+    print("= 8.  GO BACK AND ENTER A NEW SET OF NUMBERS. =")# Print option 2
+    print("= 9.  READ DATA FROM A FILE.                  =")  # Print option 6
     print("= 10. EXIT THE APPLICATION.                   =")  # Print option 6
     print("=                                             =")  # Print option 6
     print("=                                             =")  # Print option 6

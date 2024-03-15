@@ -6,7 +6,7 @@ import math
  Primary statistical functions implemented within the program.
 """
 
-# Function enter marks to list
+# Function enter marks to the list
 def enter_marks_to_list(marks):
     """
     This function allows the user to input marks until they choose to stop.
@@ -66,7 +66,6 @@ def enter_marks_to_list_by_comma(marks):
             except ValueError:
                 # Print error message for non-numerical input            
                 print("Please Enter a Valid Numerical Mark.")  
-
 
 # Define a function named ShowAllMarks that takes a list named marks as input
 def ShowAllMarks(marks):
@@ -225,3 +224,35 @@ def calculate_skewness(marks):
     return numerator / denominator
     # The skewness value is calculated by dividing the numerator by the denominator,
     # following the skewness formula.
+
+# Read data from a file and populate the list of marks.
+def read_data_from_file(filename):
+    """
+    Read data from a file and populate the list of marks.
+
+    Args:
+    filename (str): The name of the file to read data from.
+
+    Returns:
+    list: A list containing the numerical marks read from the file.
+    """
+    try:
+        # Attempt to open the file for reading
+        with open(filename, "r") as file:
+            # Read the contents of the file
+            data = file.read()
+            # Split the data by commas and convert each element to a float, then store in a list
+            marks = list(map(float, data.split(',')))
+        # Return the list of marks
+        return marks
+    except FileNotFoundError:
+        # Handle the case where the file is not found
+        print(f"Error: File '{filename}' Not Found Or Please Provide The File Name As An Argument.")
+        # Return an empty list
+        return []
+    except ValueError:
+        # Handle the case where the file contains invalid numerical data
+        print("Error: File contains invalid numerical data.")
+        # Return an empty list
+        return []
+

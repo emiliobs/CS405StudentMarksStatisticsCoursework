@@ -1,5 +1,7 @@
+import sys
 # Importing necessary functions from Models module
-from Models.calculate_model import calculate_mean, enter_marks_to_list, calculate_median, calculate_mode, calculate_skewness, ShowAllMarks,enter_marks_to_list_by_comma
+from Models.calculate_model import *
+#calculate_mean, enter_marks_to_list, calculate_median, calculate_mode, calculate_skewness, ShowAllMarks,enter_marks_to_list_by_comma
 # Importing print_menu function from Views module
 from Views.menu_view import print_menu, autor_welcome, goodbye_user
 
@@ -107,6 +109,7 @@ def main():
             # In this context, it ensures that the program does not proceed to present the menu if there are not enough numbers in the list.
             # Instead, it goes back to the beginning of the loop to allow the user to add more numbers.  
             continue
+         # If user chooses option 8 
         elif choice == "7":
             print("---------- Adding Marks In by Comma ----------")
             # Check if there are marks entered
@@ -120,8 +123,8 @@ def main():
             # Print a blank line
             print("\n")
                        
-        # If user chooses option 9                   
-        elif choice == '9':
+        # If user chooses option 8                   
+        elif choice == '8':
             print("--- Enter a New Set Of Numbers In The List ---")
             # Initialize an empty list named 'marks'
             # This line creates a new list named 'marks' with no elements.
@@ -131,8 +134,20 @@ def main():
             print("You Have Choosen To Enter a New Set Of Numbers.")
             print("----------------------------------------------")
             # Print a blank line
-            print("\n")            
-        # If user chooses option 10
+            print("\n")      
+        elif choice == '9':
+            try:                
+                print("---------= Reding Data Form A File ----------")
+                filename = input("Enter The Filename To Read Data From: ")
+                marks = read_data_from_file(filename)
+                ShowAllMarks(marks)
+                print("----------------------------------------------")
+                # Print a blank line
+                print("\n") 
+            except  ValueError as ve:
+                print(ve)
+                print("----------------------------------------------")
+       # If user chooses option 10
         elif choice == '10': 
            # Exit the function and the program
            goodbye_user()
