@@ -148,11 +148,16 @@ def calculate_skewness(marks):
     Returns:
     float: The skewness of the marks.
     """
+    
+    # Check for empty list or insufficient data points
+    if len(marks) < 3:
+        raise ValueError("Inssufficient Data Points To Calculate Skewness.")
+    
        
     # Calculate the mean of the marks
-    mean = calculate_mean(marks)  
     # Above line uses a separate function named calculate_mean to compute the mean of the marks.
     # It's done this way to break down the computation into smaller, more manageable functions.
+    mean = calculate_mean(marks)  
     
     n = len(marks)  # Get the number of marks
     
@@ -166,6 +171,12 @@ def calculate_skewness(marks):
     # The denominator of the skewness formula involves the cube of the standard deviation,
     # which is calculated using the calculate_standard_deviation function.
     # The formula also depends on the number of elements in the list.
+    
+    # Check for division by zero
+    if denominator == 0:
+        raise ValueError("Cannot Divide By Zero.")
+    
+    
     
     # Return the skewness value
     return numerator / denominator

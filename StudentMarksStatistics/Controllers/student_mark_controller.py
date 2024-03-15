@@ -22,9 +22,6 @@ def main():
          # This line prints the message to the console, informing the user to add more numbers.
           print("Please Add At Least Two Or More Numbers Before Presenting The Menu.")
           enter_marks_to_list(marks)
-        # The 'continue' statement is used to skip the rest of the loop's code block and move to the next iteration.
-        # In this context, it ensures that the program does not proceed to present the menu if there are not enough numbers in the list.
-        # Instead, it goes back to the beginning of the loop to allow the user to add more numbers.
           print("--------------------------------------------------------------------")
           continue    
           
@@ -82,22 +79,46 @@ def main():
             # Print a blank line
             print("\n")
             # If user chooses option 5
-        elif choice == '5':
-             print("------------- Result The Skewness ------------")
-             # Check if there are marks entered
-             if marks:  
-                 # Print mean of the entered marks
-                print("Skewness Of The Numbers: ", calculate_skewness(marks))  
-             else:
-                # Inform the user if no marks have been entered
-                print("No marks entered yet.") 
-             print("----------------------------------------------")
-                # Print a blank line
-                # The "\n" is an escape sequence representing a newline character,
-                # which moves the cursor to the next line when printed.
-                # Therefore, this line prints an empty line in the console output.
-             print("\n")   
-             # If user chooses option 6            
+        elif choice == '5': 
+            # If the length of the 'marks' list is less than 3, display a warning message
+            if len(marks) < 3:
+                print("------------- Warning The Skewness ------------")
+                print("Sorry!. Insufficient Data Points To Calculate Skewness(At Leat 3 Marks.)")
+                # Prompt the user to enter marks to the list
+                enter_marks_to_list(marks)          
+                print("----------------------------------------------")   
+                # The 'continue' statement is used to skip the rest of the loop's code block and move to the next iteration.
+                # In this context, it ensures that the program does not proceed to present the menu if there are not enough numbers in the list.
+                # Instead, it goes back to the beginning of the loop to allow the user to add more numbers.  
+                continue  
+            else:                            
+                print("------------- Result The Skewness ------------")
+                # Check if there are marks entered
+                if marks:  
+                    try: 
+                       # Print mean of the entered marks
+                       print("Skewness Of The Numbers: ", calculate_skewness(marks))                         
+                    except ValueError as ve:
+                        # Handle the case where an error occurs during calculation
+                        print("Error: ", ve)
+                         # Prompt the user to enter marks to the list
+                        enter_marks_to_list(marks)          
+                        print("----------------------------------------------")     
+                    # The 'continue' statement is used to skip the rest of the loop's code block and move to the next iteration.
+                    # In this context, it ensures that the program does not proceed to present the menu if there are not enough numbers in the list.
+                    # Instead, it goes back to the beginning of the loop to allow the user to add more numbers.
+                    continue  
+                
+                else:
+                      # Inform the user if no marks have been entered
+                     print("No marks entered yet.") 
+                     print("----------------------------------------------")
+            # Print a blank line
+            # The "\n" is an escape sequence representing a newline character,
+            # which moves the cursor to the next line when printed.
+            # Therefore, this line prints an empty line in the console output.
+            print("\n")   
+        # If user chooses option 6                   
         elif choice == '6':
             print("---------------- Reset The List --------------")
             # Initialize an empty list named 'marks'
