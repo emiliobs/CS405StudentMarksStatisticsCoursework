@@ -1,4 +1,5 @@
 # model.py
+import math
 
 def calculate_mean(marks):
     """Calculate the mean of the marks."""
@@ -26,6 +27,14 @@ def calculate_mode(marks):
     mode = [key for key, value in marks_count.items() if value == max_count]
     return mode[0] if mode else None
 
+def calculate_standard_deviation(marks):
+    """Calculate the standard deviation of the marks."""
+    if not marks:
+        return 0
+    mean = calculate_mean(marks)
+    variance = sum((mark - mean) ** 2 for mark in marks) / len(marks)
+    return math.sqrt(variance)
+
 def calculate_skewness(marks):
     """Calculate the skewness of the marks."""
     mean = calculate_mean(marks)
@@ -35,7 +44,6 @@ def calculate_skewness(marks):
     return numerator / denominator
 
 # view.py
-
 def print_menu():
     """Print the menu options."""
     print("\nMenu:")

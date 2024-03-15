@@ -1,4 +1,7 @@
 
+import math  # Importing the math module to use math.sqrt function for square root calculation
+
+
 def enter_marks_to_list(marks):
     """
     This function allows the user to input marks until they choose to stop.
@@ -20,9 +23,11 @@ def enter_marks_to_list(marks):
                 marks.append(mark)  # Append mark to the list
                 print("Number Of Marks Entered: ", len(marks))  # Print number of marks entered
             else:
-                print("Please Enter a Valid Mark (E.g., 5, 13.5).")  # Print error message for invalid mark
+                # Print error message for invalid mark
+                print("Please Enter a Valid Mark (E.g., 5, 13.5).") 
         except ValueError:
-            print("Please Enter a Valid Numerical Mark.")  # Print error message for non-numerical input
+            # Print error message for non-numerical input            
+            print("Please Enter a Valid Numerical Mark.")  
 
 def calculate_mean(marks):
     """
@@ -48,6 +53,11 @@ def calculate_median(marks):
     Returns:
     float: The median of the marks.
     """
+    # Calculate the median of the marks
+    
+    if not marks:  # Check if marks list is empty
+        return 0  # Return 0 if list is empty
+    
     # Sort the list of marks in ascending order
     sorted_marks = sorted(marks)
     # Get the number of marks in the list
@@ -85,3 +95,72 @@ def calculate_mode(marks):
     
     # Return the first mode if it exists, otherwise return None
     return mode[0] if mode else None
+
+def calculate_standard_deviation(marks):
+    """
+    Calculate the standard deviation of a list of marks.
+
+    Args:
+    marks (list): A list of numerical marks.
+
+    Returns:
+    float: The standard deviation of the marks.
+    """
+        
+    # Calculate the standard deviation of the marks
+    
+    if not marks:  # Check if the marks list is empty
+        return 0  # If the marks list is empty, return 0 as there are no marks to compute the standard deviation
+    
+    mean = calculate_mean(marks)  # Calculate the mean of the marks using a separate function calculate_mean
+    # Above line uses a separate function named calculate_mean to compute the mean of the marks.
+    # It's done this way to break down the computation into smaller, more manageable functions.
+    
+    # Calculate the variance of the marks
+    # Variance is the average of the squared differences from the mean
+    variance = sum((mark - mean) ** 2 for mark in marks) / len(marks)
+    # The above line uses a generator expression to iterate over each mark in the marks list.
+    # For each mark, it calculates the squared difference from the mean and sums them up.
+    # Then it divides the sum by the total number of marks to get the average squared difference.
+    
+    # Return the square root of the variance as the standard deviation
+    # Standard deviation is the square root of variance
+    return math.sqrt(variance)
+    # The square root of the variance is returned as the standard deviation.
+    # This is because the standard deviation is the measure of how spread out the values in a dataset are.
+    # By returning the square root of the variance, we're providing a measure of the spread that is in the same units as the original data.
+
+def calculate_skewness(marks):
+    """
+    Calculate the skewness of a list of marks.
+
+    Args:
+    marks (list): A list of numerical marks.
+
+    Returns:
+    float: The skewness of the marks.
+    """
+    # Calculate the skewness of the marks
+    
+    # Calculate the mean of the marks
+    mean = calculate_mean(marks)  
+    # Above line uses a separate function named calculate_mean to compute the mean of the marks.
+    # It's done this way to break down the computation into smaller, more manageable functions.
+    
+    n = len(marks)  # Get the number of marks
+    
+    # Calculate the numerator of the skewness formula
+    numerator = sum((mark - mean) ** 3 for mark in marks)
+    # The above line uses a generator expression to iterate over each mark in the marks list.
+    # For each mark, it calculates the cubed difference from the mean and sums them up.
+    
+    # Calculate the denominator of the skewness formula
+    denominator = (n - 1) * (n - 2) * (calculate_standard_deviation(marks) ** 3)
+    # The denominator of the skewness formula involves the cube of the standard deviation,
+    # which is calculated using the calculate_standard_deviation function.
+    # The formula also depends on the number of elements in the list.
+    
+    # Return the skewness value
+    return numerator / denominator
+    # The skewness value is calculated by dividing the numerator by the denominator,
+    # following the skewness formula.

@@ -1,5 +1,5 @@
 # Importing necessary functions from Models module
-from Models.calculate_model import calculate_mean, enter_marks_to_list, calculate_median, calculate_mode
+from Models.calculate_model import calculate_mean, enter_marks_to_list, calculate_median, calculate_mode, calculate_skewness
 # Importing print_menu function from Views module
 from Views.menu_view import print_menu  
 
@@ -44,7 +44,15 @@ def main():
             print("You Have Choosen To Enter a New Set Of Numbers.")
             print("-----------------------------------------------")
             print("\n")
-        elif choice == '6':  # If user chooses option 6
+        elif choice == '6':
+             print("----------- Result The Skewness ---------")
+             if marks:  # Check if there are marks entered
+                print("Skewness Of The Numbers: ", calculate_skewness(marks))  # Print mean of the entered marks
+             else:
+                print("No marks entered yet.")  # Inform the user if no marks have been entered
+                print("--------------------------------------")
+                print("\n")
+        elif choice == '7':  # If user chooses option 6
             print("======================================")
             print("=                                    =") 
             print("=                                    =") 
