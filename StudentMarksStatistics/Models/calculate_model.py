@@ -19,6 +19,7 @@ def enter_marks_to_list(marks):
     None
     """
     while True:  # Start an infinite loop
+        # Prompt the user to enter a mark
         mark_input = input("Enter a Student's Mark (or Type 'done' to Finish.): ")  # Prompt user for input
         if mark_input.lower() == "done":  # Check if user wants to finish entering marks
             break  # Exit the loop if user inputs 'done'
