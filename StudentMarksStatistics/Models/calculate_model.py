@@ -67,7 +67,7 @@ def enter_marks_to_list_by_comma(marks):
                 print("Please Enter a Valid Numerical Mark.")  
               
 # Define a function named ShowAllMarks that takes a list named marks as input
-def ShowAllMarks(marks):
+def Show_All_Marks(marks):
     # Define a function named ShowAllMarks that takes a list named marks as input
     print("Number Of Marks Entered: ", len(marks) ,"\t")
     for mark in marks:

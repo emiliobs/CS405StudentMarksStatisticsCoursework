@@ -1,71 +1,81 @@
 
-# Display welcome from Author message and information about the program
+# Display a welcome message and information about the program
 def autor_welcome():
-        print("")
-   
-        print("================================================")
-        print("=                    WELCOME                   =")
-        print("=                                              =")
-        print("=                      TO                      =")
-        print("=                                              =")
-        print("=           SPRING COURSEWORK PYTHON           =")
-        print("=                                              =")
-        print("=                                              =")
-        print("=     STUDENTS MARKS STATISTICS APPLICATION    =")
-        print("=                                              =")
-        print("=                      BY                      =")
-        print("=                                              =")
-        print("=           EMILIO BARRERA SEPULVEDA           =")
-        print("=                   22047090                   =")
-        print("=                                              =")
-        print("=                                              =")
-        print("=        LONDON METROPOLITAN UNIVERSITY        =")
-        print("=                 BSC COMPUTING                =")
-        print("=        CS4051 FUNDAMENTALS OF COMPUTING      =")
-        print("=                     LONDON                   =")
-        print("=                   2023 - 2024                =")
-        print("================================================")
+    # Print a blank line for spacing
+    print("")
+
+    # Print a decorative line of equal signs
+    print("\n" + "=" * 48)
+
+    # Print the welcome message and program details
+    print("=                    WELCOME                   =")
+    print("=                                              =")
+    print("=                      TO                      =")
+    print("=                                              =")
+    print("=           SPRING COURSEWORK PYTHON           =")
+    print("=                                              =")
+    print("=                                              =")
+    print("=     STUDENTS MARKS STATISTICS APPLICATION    =")
+    print("=                                              =")
+    print("=                      BY                      =")
+    print("=                                              =")
+    print("=           EMILIO BARRERA SEPULVEDA           =")
+    print("=                   22047090                   =")
+    print("=                                              =")
+    print("=                                              =")
+    print("=        LONDON METROPOLITAN UNIVERSITY        =")
+    print("=                 BSC COMPUTING                =")
+    print("=        CS4051 FUNDAMENTALS OF COMPUTING      =")
+    print("=                     LONDON                   =")
+    print("=                   2023 - 2024                =")
+
+    # Print another decorative line of equal signs
+    print("=" * 48)
+    
 
 # This function prints the menu options for the application.
 def print_menu():
     """
-    This function prints the menu options for the application.
+    Prints the menu options for the application.
 
     Returns:
-    None
+        None
     """
     print("\n==================== MENU ====================")  # Print menu header
     print("=                                             =")  # Print option 1
     print("=                                             =")  # Print option 1
     print("= 1.  ADD MARKS TO THE LIST.                  =")  # Print option 1
-    print("= 2.  SHOW ALL MARKS IN THE LIST.             =")
-    print("= 3.  PRINT THE MEAN OF THE NUMBERS.          =")
-    print("= 4.  PRINT THE MEDIAN OF THE NUMBERS.        =")
-    print("= 5.  PRINT THE MODE OF THE NUMBERS.          =")    
+    print("= 2.  SHOW ALL MARKS IN THE LIST.             =")  # Print option 2
+    print("= 3.  PRINT THE MEAN OF THE NUMBERS.          =")  # Print option 3
+    print("= 4.  PRINT THE MEDIAN OF THE NUMBERS.        =")  # Print option 4
+    print("= 5.  PRINT THE MODE OF THE NUMBERS.          =")  # Print option 5
     print("= 6.  PRINT THE SKEWNESS OF THE NUMBERS.      =")  # Print option 6
-    print("= 7.  ADD MORE NUMBERS TO THE LIST BY COMMAS. =")  # Print option 6
-    print("= 8.  GO BACK AND ENTER A NEW SET OF NUMBERS. =")# Print option 2
-    print("= 9.  READ DATA FROM A FILE.                  =")  # Print option 6
-    print("= 10. EXIT THE APPLICATION.                   =")  # Print option 6
-    print("=                                             =")  # Print option 6
-    print("=                                             =")  # Print option 6
+    print("= 7.  ADD MORE NUMBERS TO THE LIST BY COMMAS. =")  # Print option 7
+    print("= 8.  GO BACK AND ENTER A NEW SET OF NUMBERS. =")  # Print option 8
+    print("= 9.  READ DATA FROM A FILE.                  =")  # Print option 9
+    print("= 10. EXIT THE APPLICATION.                   =")  # Print option 10
+    print("=                                             =")  # Print menu footer
+    print("=                                             =")  # Print menu footer
     print("===============================================")  # Print menu footer
+
+
 
 # Exit the function and the program
 def goodbye_user():
-     print("==============================================")
-     print("=                                            =") 
-     print("=                                            =") 
-     print("=                THANKS YOU!                 =") 
-     print("=                                            =") 
-     print("=                                            =") 
-     print("=          EXITING THE APPLICATION.          =") 
-     print("=                                            =") 
-     print("=                                            =") 
-     print("=                  GOOD BYE!                 =") 
-     print("=                                            =") 
-     print("=                                            =") 
-     print("=                     :)                     =") 
-     print("=                                            =") 
-     print("=                                            =") 
-     print("==============================================")
+    """
+    Prints a farewell message and exits the application.
+
+    Returns:
+        None
+    """
+    print("==============================================")
+    print("=                                            =")
+    print("=                THANK YOU!                  =")
+    print("=                                            =")
+    print("=          EXITING THE APPLICATION.          =")
+    print("=                                            =")
+    print("=                  GOODBYE!                  =")
+    print("=                                            =")
+    print("=                     :)                     =")
+    print("=                                            =")
+    print("==============================================")

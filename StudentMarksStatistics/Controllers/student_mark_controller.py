@@ -46,7 +46,7 @@ def main():
              # Check if there are marks entered
             if marks: 
                 # Print mean of the entered marks
-                 ShowAllMarks(marks)  
+                 Show_All_Marks(marks)  
             else:
                 # Inform the user if no marks have been entered
                 print("No marks entered yet.")  
@@ -137,7 +137,7 @@ def main():
                 print("---------= Reding Data Form A File ----------")
                 filename = input("Enter The Filename To Read Data From: ")
                 marks = read_data_from_file(filename)
-                ShowAllMarks(marks)
+                Show_All_Marks(marks)
                 print("----------------------------------------------")
                 # Print a blank line
                 print("\n") 
