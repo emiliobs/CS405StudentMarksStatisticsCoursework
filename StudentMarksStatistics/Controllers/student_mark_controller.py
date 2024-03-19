@@ -1,4 +1,3 @@
-import sys
 # Importing necessary functions from Models module
 from Models.calculate_model import *
 #calculate_mean, enter_marks_to_list, calculate_median, calculate_mode, calculate_skewness, ShowAllMarks,enter_marks_to_list_by_comma
