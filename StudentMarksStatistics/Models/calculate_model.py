@@ -32,10 +32,10 @@ def enter_marks_to_list(marks):
                 print("Number Of Marks Entered: ", len(marks))  # Print number of marks entered
             else:
                 # Print error message for invalid mark
-                print("Please Enter a Valid Mark (E.g., 5, 13.5).") 
+                print("ERROR. Please Enter a Valid Mark (E.g., 5, 13.5).") 
         except ValueError:
             # Print error message for non-numerical input            
-            print("Please Enter a Valid Numerical Mark.")  
+            print("Error. Please Enter a Valid Numerical Mark.")  
             
 # Function enter marks to list by commas
 def enter_marks_to_list_by_comma(marks):
@@ -64,7 +64,7 @@ def enter_marks_to_list_by_comma(marks):
                 print("Number of Marks Entered:", len(marks))  
             except ValueError:
                 # Print error message for non-numerical input            
-                print("Please Enter a Valid Numerical Mark.")  
+                print("ERROR. Please Enter a Valid Numerical Mark.")  
               
 # Define a function named ShowAllMarks that takes a list named marks as input
 def Show_All_Marks(marks):
@@ -216,7 +216,7 @@ def calculate_skewness(marks):
     
     # Check for division by zero
     if denominator == 0:
-        raise ValueError("Sorry: Must Have At  leat One Mark is greater Than Zero In the List.")
+        raise ValueError("ERROR: Must Have At  leat One Mark is greater Than Zero In the List.")
        
     
     # Return the skewness value
