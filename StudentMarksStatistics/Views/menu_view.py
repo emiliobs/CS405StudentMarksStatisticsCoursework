@@ -41,9 +41,9 @@ def print_menu():
     Returns:
         None
     """
-    print("\n==================== MENU ====================")  # Print menu header
-    print("=                                             =")  # Print option 1
-    print("=                                             =")  # Print option 1
+    print("\n================= MENU ========================")  # Print menu header
+    print("=                                             =")  # Print menu head
+    print("=                                             =")  # Print menu head
     print("= 1.  ADD MARKS TO THE LIST.                  =")  # Print option 1
     print("= 2.  SHOW ALL MARKS IN THE LIST.             =")  # Print option 2
     print("= 3.  PRINT THE MEAN OF THE NUMBERS.          =")  # Print option 3
@@ -68,6 +68,7 @@ def goodbye_user():
     Returns:
         None
     """
+     # Print a decorative line
     print("==============================================")
     print("=                                            =")
     print("=                THANK YOU!                  =")
@@ -79,5 +80,7 @@ def goodbye_user():
     print("=                     :)                     =")
     print("=                                            =")
     print("==============================================")
+    # Print a newline character for better formatting
     print("\n")
+    # Exit the program
     exit()

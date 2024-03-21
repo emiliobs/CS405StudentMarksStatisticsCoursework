@@ -26,9 +26,11 @@ def enter_marks_to_list(marks):
             # Exit the loop if user inputs 'done'
             break  
         try:
-            mark = float(mark_input)  # Convert input to float
-            if mark > -1:  # Check if mark is valid (assuming negative marks are not allowed)
-                marks.append(mark)  # Append mark to the list
+            # Convert input to float
+            mark = float(mark_input)
+             # Check if mark is valid (assuming negative marks are not allowed)  
+            if mark > -1: 
+                marks.append(mark) #Append mark to the list
                 print("Number Of Marks Entered: ", len(marks))  # Print number of marks entered
             else:
                 # Print error message for invalid mark
@@ -158,27 +160,30 @@ def calculate_standard_deviation(marks):
     float: The standard deviation of the marks.
     """
     
-    if not marks:  # Check if the marks list is empty
-        return 0  # If the marks list is empty, return 0 as there are no marks to compute the standard deviation
+     # Check if the marks list is empty
+    if not marks: 
+        # If the marks list is empty, return 0 as there are no marks to compute the standard deviation
+        return 0  
     
-    mean = calculate_mean(marks)  # Calculate the mean of the marks using a separate function calculate_mean
+    # Calculate the mean of the marks using a separate function calculate_mean
     # Above line uses a separate function named calculate_mean to compute the mean of the marks.
     # It's done this way to break down the computation into smaller, more manageable functions.
+    mean = calculate_mean(marks)  
     
     # Calculate the variance of the marks
     # Variance is the average of the squared differences from the mean
-    variance = sum((mark - mean) ** 2 for mark in marks) / len(marks)
     # The above line uses a generator expression to iterate over each mark in the marks list.
     # For each mark, it calculates the squared difference from the mean and sums them up.
     # Then it divides the sum by the total number of marks to get the average squared difference.
+    variance = sum((mark - mean) ** 2 for mark in marks) / len(marks)   
     
     # Return the square root of the variance as the standard deviation
     # Standard deviation is the square root of variance
-    return math.sqrt(variance)
     # The square root of the variance is returned as the standard deviation.
     # This is because the standard deviation is the measure of how spread out the values in a dataset are.
     # By returning the square root of the variance, we're providing a measure of the spread that is in the same units as the original data.
-
+    return math.sqrt(variance)
+    
 # Function Calculate the skewness of the marks
 def calculate_skewness(marks):
     """
