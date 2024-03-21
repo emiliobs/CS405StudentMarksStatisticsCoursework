@@ -240,10 +240,15 @@ def read_data_from_file(filename):
         with open(filename, "r") as file:
             # Read the contents of the file
             data = file.read()
-            # Split the data by commas and convert each element to a float, then store in a list
-            marks = list(map(float, data.split(',')))
-        # Return the list of marks
-        return marks
+            if data != '':
+                print("Great!. The File Was Read Successfully.")
+                # Split the data by commas and convert each element to a float, then store in a list
+                marks = list(map(float, data.split(',')))
+                # Return the list of marks
+                return marks
+            else:
+                print("Sorry!. The File Has No Data.")
+                return ""
     except FileNotFoundError:
         # Handle the case where the file is not found
         print(f"Error: File '{filename}' Not Found Or Please Provide The File Name As An Argument.")
