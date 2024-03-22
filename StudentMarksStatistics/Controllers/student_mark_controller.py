@@ -5,13 +5,17 @@ from Models.calculate_model import *
 from Views.menu_view import print_menu, autor_welcome, goodbye_user
 
 """Main function to orchestrate the interaction between the Model and the View."""
-def main():    
+def main():   
+     
     # Display welcome message and information about the program
-    autor_welcome()    
+    autor_welcome()  
+      
     # Initialize an empty list to store marks
     marks = []  
+    
     # Start an infinite loop for displaying the menu and handling user choices
     while True:  
+        
         # Check if the length of the 'marks' list is less than 2
         # If there are less than 2 numbers in the list, prompt the user to add at least two numbers
         # before presenting the menu
@@ -23,14 +27,15 @@ def main():
             print("Please Add At Least Two Or More Numbers Before Presenting The Menu.")
             enter_marks_to_list(marks)
             print("--------------------------------------------------------------------")
-            continue          
+            continue              
         
         # Display the menu options
         print_menu()  
+      
         # Prompt the user to enter their choice
         choice = input("Enter Your Choice: ")  
-        print("\n")
-        
+        print("\n")        
+       
         # Dictionary to map user choices to corresponding functions
         switch = {
             '1': add_marks,
@@ -43,17 +48,17 @@ def main():
             '8': enter_new_set,
             '9': read_from_file,
             '10': exit_program,
-        }
-        
+        }        
+      
        # Execute the chosen function based on the user's input
         if choice in switch:
-         # If the user's choice is a valid option in the menu, the corresponding function is called with 'marks' list as argument
+         # If the user's choice is a valid option in the menu, the corresponding function is called 
+         # with 'marks' list as argument
          switch[choice](marks)
         else:
         # If the user's choice is not valid, an error message is displayed
-         print("Invalid Choice. Please Enter A Number From 1 To 10.")
+         print("Invalid Choice. Please Enter A Number From 1 To 10.")    
 
-    
 # Function to add marks to the list
 def add_marks(marks):
     # Print a message indicating that marks are being added
@@ -64,7 +69,6 @@ def add_marks(marks):
     print("---------------------------------------------------------")    
     # Print a newline character for better formatting
     print("\n")
-
 
 # Function to display the entered marks
 def show_marks(marks):
@@ -87,6 +91,8 @@ def show_marks(marks):
 
 
  # Function to calculate and display the mean of the marks
+
+# Function to calculate and display the mean of the marks
 def show_mean(marks):
     # Print a message indicating that the mean is being calculated
     print("--------------- Result The Means -------------")
@@ -107,6 +113,8 @@ def show_mean(marks):
 
     
  # Function to calculate and display the median of the marks
+
+# Function to calculate and display the median of the marks
 def show_median(marks):
     # Print a message indicating that the median is being calculated
     print("-------------- Result The Median--------------")
@@ -125,7 +133,6 @@ def show_median(marks):
     # Print a newline character for better formatting
     print("\n")
 
-    
 # Function to calculate and display the mode of the marks
 def show_mode(marks):
     # Print a message indicating that the mode is being calculated
@@ -145,7 +152,6 @@ def show_mode(marks):
     # Print a newline character for better formatting
     print("\n")
 
-
 # Function to calculate and display the skewness of the marks
 def show_skewness(marks):
     try:
@@ -163,7 +169,6 @@ def show_skewness(marks):
         # Prompt the user to enter more marks
         enter_marks_to_list(marks)
 
-                          
 # Function to add marks to the list using comma-separated input
 def add_marks_by_comma(marks):
     try:
@@ -182,7 +187,6 @@ def add_marks_by_comma(marks):
         print("----------------------------------------------")
         # Print a newline character for better formatting
         print("\n")
-
 
 # Function to clear the list and enter a new set of marks
 def enter_new_set(marks):
@@ -203,7 +207,6 @@ def enter_new_set(marks):
     
     # Return the empty marks list
     return marks
-
 
 # Function to read marks from a file and add them to the list
 def read_from_file(marks):
@@ -237,8 +240,6 @@ def read_from_file(marks):
         # Print a separator line for better readability
         print("----------------------------------------------")
 
-        
-        
 # Function to exit the program
 def exit_program(marks):
     # Clear the marks list
