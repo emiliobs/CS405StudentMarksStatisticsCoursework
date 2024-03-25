@@ -1,3 +1,8 @@
+# Models
+# STUDENTS MARKS STATISTICS APPLICATION V 1.0
+# This program provides functions to input, manipulate, and analyze a list of student marks.
+# Author: Emilio Antonio Barrera Sepúlveda
+# Date Programmed: 3/25/2024
 
 # Importing the math module to use math.sqrt function for square root calculation
 import math  
@@ -30,8 +35,10 @@ def enter_marks_to_list(marks):
             mark = float(mark_input)
              # Check if mark is valid (assuming negative marks are not allowed)  
             if mark > -1: 
-                marks.append(mark) #Append mark to the list
-                print("Number Of Marks Entered: ", len(marks))  # Print number of marks entered
+                #Append mark to the list
+                marks.append(mark) 
+                # Print number of marks entered
+                print("Number Of Marks Entered: ", len(marks))  
             else:
                 # Print error message for invalid mark
                 print("ERROR. Please Enter a Valid Mark (E.g., 5, 13.5).") 

@@ -1,3 +1,9 @@
+# Controllers
+# STUDENTS MARKS STATISTICS APPLICATION V 1.0
+# This program allows users to input, manipulate, and analyze a list of student marks.
+# Author: Emilio Antonio Barrera Sepúlveda
+# Date Programmed: 3/25/2024
+
 # Importing necessary functions from Models module
 from Models.calculate_model import *
 

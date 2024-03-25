@@ -1,3 +1,9 @@
+# Views
+# STUDENTS MARKS STATISTICS APPLICATION V 1.0
+# This program provides functionalities for managing and analyzing student marks.
+# Author: Emilio Antonio Barrera Sepúlveda
+# Date Programmed: 3/25/2024
+
 
 # Display a welcome message and information about the program
 def autor_welcome():
@@ -61,7 +67,13 @@ def print_menu():
 
 
 # Exit the function and the program
-def goodbye_user():    
+def goodbye_user():   
+    """
+    Prints a farewell message and exits the application.
+
+    Returns:
+        None
+    """ 
      # Print a decorative line
     print("==============================================")
     print("=                                            =")
@@ -70,7 +82,7 @@ def goodbye_user():
     print("=                                            =")
     print("=          EXITING THE APPLICATION.          =")
     print("=                                            =")
-    print("=                  GOODBYE!                  =")
+    print("=                  GOOD BYE!                 =")
     print("=                                            =")
     print("=                     :)                     =")
     print("=                                            =")
@@ -81,9 +93,4 @@ def goodbye_user():
     # Exit the program
     exit()
     
-    """
-    Prints a farewell message and exits the application.
-
-    Returns:
-        None
-    """
+    

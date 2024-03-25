@@ -1,3 +1,9 @@
+# Main
+# STUDENTS MARKS STATISTICS APPLICATION V 1.0
+# This script executes the main logic of a program for managing and analyzing student marks.
+# Author: Emilio Antonio Barrera Sepúlveda
+# Date Programmed: 3/25/2024
+
 # Importing main function from Controllers module
 from Controllers.student_mark_controller import main
 
