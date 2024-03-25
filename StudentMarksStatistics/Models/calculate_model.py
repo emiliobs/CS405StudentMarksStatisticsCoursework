@@ -90,9 +90,12 @@ def calculate_mean(marks):
     Returns:
     float: The mean of the marks. If the list is empty, returns 0.
     """
-    if not marks:  # Check if marks list is empty
-        return 0  # Return 0 if list is empty
-    return sum(marks) / len(marks)  # Calculate mean of marks and return it
+    # Check if marks list is empty
+    if not marks:  
+        # Return 0 if list is empty
+        return 0  
+    # Calculate mean of marks and return it
+    return sum(marks) / len(marks)  
 
 # Function Calculate the median of the marks
 def calculate_median(marks):
@@ -105,7 +108,7 @@ def calculate_median(marks):
     Returns:
     float: The median of the marks.
     """
-       
+    
     if not marks:  # Check if marks list is empty
         return 0  # Return 0 if list is empty
     
@@ -185,7 +188,7 @@ def calculate_standard_deviation(marks):
     return math.sqrt(variance)
     
 # Function Calculate the skewness of the marks
-def calculate_skewness(marks):
+def calculate_skewness(marks):  
     """
     Calculate the skewness of a list of marks.
 
@@ -195,7 +198,6 @@ def calculate_skewness(marks):
     Returns:
     float: The skewness of the marks.
     """
-    
     # Check for empty list or insufficient data points
     if len(marks) < 3:
         raise ValueError("Sorry!. Insufficient Data Points To Calculate Skewness(At Leat 3 Marks.")
@@ -221,8 +223,7 @@ def calculate_skewness(marks):
     
     # Check for division by zero
     if denominator == 0:
-        raise ValueError("ERROR: Must Have At  leat One Mark is greater Than Zero In the List.")
-       
+        raise ValueError("ERROR: Must Have At  leat One Mark is greater Than Zero In the List.")       
     
     # Return the skewness value
     return numerator / denominator
@@ -264,4 +265,5 @@ def read_data_from_file(filename):
         print("Error: File contains invalid numerical data.")
         # Return an empty list
         return []
+
 

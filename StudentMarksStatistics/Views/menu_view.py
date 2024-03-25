@@ -61,15 +61,10 @@ def print_menu():
 
 
 # Exit the function and the program
-def goodbye_user():
-    """
-    Prints a farewell message and exits the application.
-
-    Returns:
-        None
-    """
+def goodbye_user():    
      # Print a decorative line
     print("==============================================")
+    print("=                                            =")
     print("=                                            =")
     print("=                THANK YOU!                  =")
     print("=                                            =")
@@ -79,8 +74,16 @@ def goodbye_user():
     print("=                                            =")
     print("=                     :)                     =")
     print("=                                            =")
+    print("=                                            =")
     print("==============================================")
     # Print a newline character for better formatting
     print("\n")
     # Exit the program
     exit()
+    
+    """
+    Prints a farewell message and exits the application.
+
+    Returns:
+        None
+    """
