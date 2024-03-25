@@ -2,7 +2,7 @@
 # STUDENTS MARKS STATISTICS APPLICATION V 1.0
 # This program provides functions to input, manipulate, and analyze a list of student marks.
 # Author: Emilio Antonio Barrera Sepúlveda
-# Date Programmed: 3/25/2024
+# Date Programmed: 3/14/2024
 
 # Importing the math module to use math.sqrt function for square root calculation
 import math  

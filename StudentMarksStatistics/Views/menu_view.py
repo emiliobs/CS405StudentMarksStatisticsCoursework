@@ -2,7 +2,7 @@
 # STUDENTS MARKS STATISTICS APPLICATION V 1.0
 # This program provides functionalities for managing and analyzing student marks.
 # Author: Emilio Antonio Barrera Sepúlveda
-# Date Programmed: 3/25/2024
+# Date Programmed: 3/20/2024
 
 
 # Display a welcome message and information about the program
