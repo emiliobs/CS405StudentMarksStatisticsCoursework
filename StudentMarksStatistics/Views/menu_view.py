@@ -4,7 +4,6 @@
 # Author: Emilio Antonio Barrera Sepúlveda
 # Date Programmed: 3/20/2024
 
-
 # Display a welcome message and information about the program
 def autor_welcome():
     # Print a blank line for spacing
