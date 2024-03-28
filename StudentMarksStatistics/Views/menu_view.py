@@ -24,7 +24,7 @@ def autor_welcome():
     print("=                                              =")
     print("=                      BY                      =")
     print("=                                              =")
-    print("=           EMILIO BARRERA SEPULVEDA           =")
+    print("=       EMILIO ANTONIO BARRERA SEPULVEDA       =")
     print("=                   22047090                   =")
     print("=                                              =")
     print("=                                              =")
