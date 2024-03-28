@@ -1,5 +1,5 @@
-# CS405StudentMarksStatisticsCoursework
- CS4051Fundamentals of Computing-Spring 2023-24 Python
+# CS405 Student Marks Statistics Coursework
+ CS4051 Fundamentals of Computing-Spring 2023-24 Python
 
  # Program Start and Welcome Information 
 
