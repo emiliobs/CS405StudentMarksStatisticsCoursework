@@ -7,6 +7,7 @@
 # Importing the math module to use math.sqrt function for square root calculation
 import math  
 
+
 """
  Primary statistical functions implemented within the program.
 """
@@ -192,7 +193,8 @@ def calculate_standard_deviation(marks):
     # The square root of the variance is returned as the standard deviation.
     # This is because the standard deviation is the measure of how spread out the values in a dataset are.
     # By returning the square root of the variance, we're providing a measure of the spread that is in the same units as the original data.
-    return math.sqrt(variance)
+     #return math.sqrt(variance)
+    return variance ** 0.5
     
 # Function Calculate the skewness of the marks
 def calculate_skewness(marks):  
